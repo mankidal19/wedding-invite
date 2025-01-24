@@ -5,13 +5,12 @@
 ## Repository of Love: Integrating Two Lives Into One
 
 ### Code Snippet
-'''
-python
+```python
 def life_together(ahmad, siti):
     return ahmad + siti  # Love as the sum of our lives
 
 happiness = integrate_love('Nikah', 'Forever')  # Infinite loop of happiness
-'''
+```
 
 ---
 
