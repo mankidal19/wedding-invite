@@ -6,6 +6,7 @@
 
 ### Code Snippet
 '''
+python
 def life_together(ahmad, siti):
     return ahmad + siti  # Love as the sum of our lives
 
