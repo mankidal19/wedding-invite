@@ -5,7 +5,7 @@
 ## Repository of Love: Integrating Two Lives Into One
 
 ### Code Snippets
-#### Infinite Loop for Analytics
+#### Analytics Infinite Loop of Love
 ```python
 import pandas as pd
 
