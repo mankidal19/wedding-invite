@@ -16,20 +16,14 @@ while True:
     love = "💖"
     print(f"{couple['Names'][0]} and {couple['Names'][1]} share their {love} forever!")
 ```
+##### Output
+```python
+Ahmad and Siti share their 💖 forever!
+Ahmad and Siti share their 💖 forever!
+Ahmad and Siti share their 💖 forever!
+... (repeats indefinitely)
 
-#### A Singleton Object for Eternal Happiness
-```kotlin
-object EternalHappiness {
-    fun celebrate(partner1: String, partner2: String) {
-        println("🌟 $partner1 and $partner2 achieved Eternal Happiness together! 🌟")
-    }
-}
-
-fun main() {
-    EternalHappiness.celebrate("Ahmad", "Siti")
-}
 ```
-
 ---
 
 ### Pull Request  
