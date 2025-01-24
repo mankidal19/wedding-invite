@@ -12,8 +12,9 @@ import pandas as pd
 # Define the happy couple
 couple = pd.DataFrame({'Names': ['Ahmad', 'Siti'], 'Role': ['Husband', 'Wife']})
 
+love = "💖"
+
 while True:
-    love = "💖"
     print(f"{couple['Names'][0]} and {couple['Names'][1]} share their {love} forever!")
 ```
 ##### Output
