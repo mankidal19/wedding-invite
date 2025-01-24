@@ -1,0 +1,107 @@
+openapi: 3.0.0
+info:
+  title: Wedding Invitation API
+  description: |
+    Welcome to the Wedding Invitation API for the joyous union of **Ahmad** and **Siti**.
+    This API serves as your guide to the event details and allows you to RSVP.
+  version: 1.0.0
+  contact:
+    name: Ahmad & Siti's Wedding Team
+    email: wedding@ahmad-siti.com
+    url: https://ahmad-siti-wedding.com
+
+servers:
+  - url: https://ahmad-siti-wedding.com/api
+    description: Production server
+
+paths:
+  /wedding-details:
+    get:
+      summary: Get Wedding Details
+      description: Retrieve the wedding event information for Ahmad and Siti.
+      responses:
+        '200':
+          description: A JSON object containing the wedding details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  couple:
+                    type: string
+                    example: Ahmad ❤️ Siti
+                  date:
+                    type: string
+                    example: February 24, 2025
+                  time:
+                    type: string
+                    example: 11:00 AM - 4:00 PM
+                  location:
+                    type: string
+                    example: Dewan Harmoni, [3.0899, 101.5171]
+                  message:
+                    type: string
+                    example: "Join us for an unforgettable celebration of love and happiness!"
+  /rsvp:
+    post:
+      summary: RSVP to the Wedding
+      description: Let Ahmad and Siti know you're attending their big day!
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: John Doe
+                guests:
+                  type: integer
+                  example: 2
+                message:
+                  type: string
+                  example: "Looking forward to celebrating with you!"
+      responses:
+        '200':
+          description: RSVP successfully submitted.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Success
+                  message:
+                    type: string
+                    example: "Thank you, John Doe! Your RSVP has been received."
+        '400':
+          description: Invalid RSVP data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: Failed
+                  error:
+                    type: string
+                    example: "Name is required."
+
+components:
+  schemas:
+    WeddingDetails:
+      type: object
+      properties:
+        couple:
+          type: string
+        date:
+          type: string
+        time:
+          type: string
+        location:
+          type: string
+        message:
+          type: string
